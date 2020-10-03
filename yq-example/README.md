@@ -24,6 +24,10 @@ spec:
 
 # Merging YAML files
 
+Let's assume that you want to inject an extra container to all the Pods submitted to the cluster.
+
+But instead of using an **Admission Webhook**, you decide to add an extra command in your deployment script.
+
 ```
 yq m --append pod.yaml envoy-pod.yaml
 apiVersion: v1
